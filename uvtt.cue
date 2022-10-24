@@ -22,16 +22,18 @@
   freestanding: bool
 }
 
+#rgb_string: =~"^[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$"
+
 #environment: {
   baked_lighting: bool
-  ambient_light?: string
+  ambient_light?: #rgb_string
 }
 
 #light: {
   position: #point
   range: number
   intensity: number
-  color: string
+  color: #rgb_string
   shadows: bool
 }
 
