@@ -3,6 +3,13 @@
   y: number
 }
 
+#bounded_point: #point & {
+  _max_x: number
+  _max_y: number
+  x: >=0 & <=_max_x
+  y: >=0 & <=_max_y
+}
+
 #dimensions: {
   x: number
   y: number
@@ -38,12 +45,14 @@
 }
 
 #uvtt: {
+  _point_bounds: { _max_x: resolution.map_size.x, _max_y: resolution.map_size.y }
   format: number & >0
   resolution: #resolution
-  line_of_sight: [...[...#point]]
-  portals: [...#portal]
+  line_of_sight: [...[...#bounded_point & _point_bounds]]
+  objects_line_of_sight: [...[...#bounded_point & _point_bounds]]
+  portals: [...#portal & { position: #bounded_point & _point_bounds }]
   environment: #environment
-  lights: [...#light]
+  lights: [...#light & { position: #bounded_point & _point_bounds }]
   image: string
   ...
 }
