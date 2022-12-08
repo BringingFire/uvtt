@@ -1,0 +1,30 @@
+# Summary
+
+[Overview](overview.md)
+
+# Reference 
+
+- [Format](format/index.md)
+  - [format (decimal)](format/format.md)
+  - [resolution (object)](format/resolution/index.md)
+    - [resolution.map_origin (object)](format/resolution/map_origin.md)
+    - [resolution.map_size (object)](format/resolution/map_size.md)
+    - [resolution.pixels_per_grid (integer)](format/resolution/pixels_per_grid.md)
+  - [line_of_sight (array)](format/line_of_sight.md)
+  - [objects_line_of_sight (array)](format/objects_line_of_sight.md)
+  - [portals (array)](format/portals/index.md)
+    - [portals[*].position]()
+    - [portals[*].bounds]()
+    - [portals[*].rotation (decimal)]()
+    - [portals[*].closed (boolean)]()
+    - [portals[*].freestanding (boolean)]()
+  - [environment (object)](format/environment/index.md)
+    - [environment.baked_lighting (boolean)](format/environment/baked_lighting.md)
+    - [environment.ambient_light (string)](format/environment/ambient_light.md)
+  - [lights (array)](format/lights/index.md)
+    - [lights[*].position (object)](format/lights/position.md)
+    - [lights[*].range (decimal)]()
+    - [lights[*].intensity (decimal)]()
+    - [lights[*].color (string)](format/lights/color.md)
+    - [lights[*].shadows (boolean)]()
+  - [image (string)](format/image.md)
