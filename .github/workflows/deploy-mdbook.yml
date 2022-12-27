@@ -1,7 +1,7 @@
 name: Deploy mdBook
 
 env:
-  MDBOOK_VER: 0.4.22
+  MDBOOK_VER: 0.4.25
 
 on:
   push:
